@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La Esmeralda Barber Club | Agendá tu turno</title>
+  <meta name="description" content="Cortes, barba y colorimetría. Agendá tu turno por WhatsApp en La Esmeralda Barber Club.">
+  <link rel="icon" type="image/jpeg" href="803828145_18443646328122700_5870705833807568123_n.jpg">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind + FontAwesome -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { esm: '#00ff6a', ink: '#0a0a0a', panel: '#141414' },
+        fontFamily: { title: ['Montserrat', 'sans-serif'], body: ['Inter', 'sans-serif'] }
+      } }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: #0a0a0a; }
+    .glow:hover { box-shadow: 0 0 0 1px #00ff6a, 0 0 28px rgba(0,255,106,.25); }
+    @keyframes pulse-ring { 0% { box-shadow: 0 0 0 0 rgba(0,255,106,.6); } 100% { box-shadow: 0 0 0 22px rgba(0,255,106,0); } }
+    .pulse { animation: pulse-ring 2s infinite; }
+    @media (prefers-reduced-motion: reduce) { .pulse { animation: none; } html { scroll-behavior: auto; } }
+  </style>
+</head>
+
+<body class="font-body text-neutral-300 antialiased">
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="sticky top-0 z-40 bg-ink/90 backdrop-blur border-b border-white/10">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between px-4 h-16">
+      <a href="#inicio" class="flex items-center gap-2">
+        <!-- PONER LOGO AQUI (reemplazá logo.png por la ruta de tu logo) -->
+        <img src="803828145_18443646328122700_5870705833807568123_n.jpg" alt="La Esmeralda" class="h-11 w-11 rounded-full object-cover">
+        <span class="hidden sm:block font-title font-extrabold text-white">La Esmeralda</span>
+      </a>
+      <div class="flex items-center gap-5">
+        <a href="#servicios" class="hidden sm:block text-sm hover:text-esm transition">Servicios</a>
+        <a href="#trabajos" class="hidden sm:block text-sm hover:text-esm transition">Trabajos</a>
+        <a href="#ubicacion" class="hidden sm:block text-sm hover:text-esm transition">Ubicación</a>
+        <!-- PONER ENLACE DE WA AQUI (reemplazá 5490000000000 por el número con código de país, sin + ni espacios) -->
+        <a href="https://wa.me/5490000000000?text=Hola%2C%20quiero%20agendar%20un%20turno" target="_blank" rel="noopener"
+           class="bg-esm text-black font-title font-bold text-sm px-5 py-2.5 rounded-full hover:brightness-110 transition">
+          Reservar
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section id="inicio" class="relative isolate flex items-center min-h-[88vh] overflow-hidden">
+    <!-- PONER IMAGEN DE FONDO AQUI (cambiá la URL por una foto de la barbería) -->
+    <div class="absolute inset-0 -z-20 bg-cover bg-center"
+         style="background-image:url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1400&q=70')"></div>
+    <!-- Overlay oscuro -->
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-ink/80 via-ink/85 to-ink"></div>
+
+    <div class="max-w-6xl mx-auto px-4 py-16 w-full">
+      <h1 class="font-title font-black text-white text-4xl sm:text-6xl lg:text-7xl leading-[1.05] max-w-3xl">
+        Tu mejor versión empieza acá.
+      </h1>
+      <p class="mt-5 text-base sm:text-lg max-w-xl text-neutral-300">
+        Cortes precisos, barba impecable y un ambiente donde te sentís como en casa. Escribinos y te reservamos tu turno en minutos.
+      </p>
+      <!-- PONER ENLACE DE WA AQUI -->
+      <a href="https://wa.me/5490000000000?text=Hola%2C%20quiero%20agendar%20un%20turno" target="_blank" rel="noopener"
+         class="mt-9 flex sm:inline-flex items-center justify-center gap-3 bg-esm text-black font-title font-extrabold text-lg px-8 py-5 rounded-2xl shadow-[0_0_40px_rgba(0,255,106,.35)] hover:brightness-110 active:scale-[.98] transition">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+        Agendar turno por WhatsApp
+      </a>
+      <p class="mt-4 text-sm text-neutral-400">Respondemos rápido. Sin formularios ni registros.</p>
+    </div>
+  </section>
+
+  <!-- ============ SERVICIOS ============ -->
+  <section id="servicios" class="max-w-6xl mx-auto px-4 py-20">
+    <h2 class="font-title font-extrabold text-white text-3xl sm:text-4xl">Nuestros servicios</h2>
+    <p class="mt-2 text-neutral-400">Elegí lo que necesitás y coordinamos el horario por WhatsApp.</p>
+
+    <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- EDITAR SERVICIOS Y PRECIOS AQUI -->
+      <article class="glow transition bg-panel border border-white/10 rounded-2xl p-7">
+        <i class="fa-solid fa-scissors text-esm text-3xl"></i>
+        <h3 class="mt-5 font-title font-bold text-white text-xl">Corte clásico / Fade</h3>
+        <p class="mt-2 text-sm text-neutral-400">Degradados limpios y cortes a medida según tu estilo y tu rostro.</p>
+        <p class="mt-5 font-title font-bold text-esm">$0.000</p>
+      </article>
+
+      <article class="glow transition bg-panel border border-white/10 rounded-2xl p-7">
+        <i class="fa-solid fa-fire-flame-curved text-esm text-3xl"></i>
+        <h3 class="mt-5 font-title font-bold text-white text-xl">Barba con toalla caliente</h3>
+        <p class="mt-2 text-sm text-neutral-400">Perfilado, vapor y afeitado clásico para una piel suave y una barba prolija.</p>
+        <p class="mt-5 font-title font-bold text-esm">$0.000</p>
+      </article>
+
+      <article class="glow transition bg-panel border border-white/10 rounded-2xl p-7 sm:col-span-2 lg:col-span-1">
+        <i class="fa-solid fa-palette text-esm text-3xl"></i>
+        <h3 class="mt-5 font-title font-bold text-white text-xl">Colorimetría</h3>
+        <p class="mt-2 text-sm text-neutral-400">Decoloración, mechas y color fantasía con productos de calidad profesional.</p>
+        <p class="mt-5 font-title font-bold text-esm">$0.000</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ GALERIA ============ -->
+  <section id="trabajos" class="max-w-6xl mx-auto px-4 pb-20">
+    <h2 class="font-title font-extrabold text-white text-3xl sm:text-4xl">Nuestros trabajos</h2>
+    <p class="mt-2 text-neutral-400">Resultados reales de nuestros clientes.</p>
+
+    <div class="mt-10 grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3">
+      <!-- PONER FOTOS DE TRABAJOS AQUI (reemplazá cada src por tu imagen: trabajo1.jpg, etc.) -->
+      <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=600&h=600&q=70" alt="Trabajo 1" loading="lazy" class="aspect-square w-full object-cover rounded-xl hover:opacity-80 transition">
+      <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=600&h=600&q=70" alt="Trabajo 2" loading="lazy" class="aspect-square w-full object-cover rounded-xl hover:opacity-80 transition">
+      <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=600&h=600&q=70" alt="Trabajo 3" loading="lazy" class="aspect-square w-full object-cover rounded-xl hover:opacity-80 transition">
+      <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=600&h=600&q=70" alt="Trabajo 4" loading="lazy" class="aspect-square w-full object-cover rounded-xl hover:opacity-80 transition">
+      <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=600&h=600&q=70" alt="Trabajo 5" loading="lazy" class="aspect-square w-full object-cover rounded-xl hover:opacity-80 transition">
+      <img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=600&h=600&q=70" alt="Trabajo 6" loading="lazy" class="aspect-square w-full object-cover rounded-xl hover:opacity-80 transition">
+    </div>
+
+    <!-- PONER ENLACE DE INSTAGRAM AQUI -->
+    <a href="https://instagram.com/" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 text-esm font-semibold hover:underline">
+      <i class="fa-brands fa-instagram text-xl"></i> Ver más en Instagram
+    </a>
+  </section>
+
+  <!-- ============ UBICACION Y HORARIOS ============ -->
+  <section id="ubicacion" class="bg-panel border-y border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-20 grid gap-10 md:grid-cols-2 items-center">
+      <div>
+        <h2 class="font-title font-extrabold text-white text-3xl sm:text-4xl">Vení a visitarnos</h2>
+        <ul class="mt-8 space-y-6">
+          <li class="flex gap-4">
+            <i class="fa-solid fa-location-dot text-esm text-xl mt-1"></i>
+            <div>
+              <p class="font-title font-bold text-white">Dirección</p>
+              <!-- EDITAR DIRECCION AQUI -->
+              <p class="text-neutral-400">Calle Ejemplo 1234, Ciudad, Provincia</p>
+            </div>
+          </li>
+          <li class="flex gap-4">
+            <i class="fa-regular fa-clock text-esm text-xl mt-1"></i>
+            <div>
+              <p class="font-title font-bold text-white">Horarios</p>
+              <!-- EDITAR HORARIOS AQUI -->
+              <p class="text-neutral-400">Martes a sábado: 10:00 a 20:00</p>
+              <p class="text-neutral-400">Domingo y lunes: cerrado</p>
+            </div>
+          </li>
+        </ul>
+        <!-- PONER ENLACE DE WA AQUI -->
+        <a href="https://wa.me/5490000000000?text=Hola%2C%20quiero%20agendar%20un%20turno" target="_blank" rel="noopener"
+           class="mt-10 flex sm:inline-flex items-center justify-center gap-3 bg-esm text-black font-title font-extrabold px-7 py-4 rounded-2xl hover:brightness-110 active:scale-[.98] transition">
+          <i class="fa-brands fa-whatsapp text-2xl"></i> Reservar mi turno
+        </a>
+      </div>
+
+      <!-- PONER MAPA AQUI (Google Maps > Compartir > Insertar un mapa > pegá el iframe) -->
+      <div class="aspect-[4/3] rounded-2xl border border-white/10 bg-ink flex items-center justify-center text-neutral-500 text-sm overflow-hidden">
+        <span><i class="fa-solid fa-map mr-2"></i>Mapa de Google Maps</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="px-4 py-8 text-center text-sm text-neutral-500">
+    © 2026 La Esmeralda Barber Club. Todos los derechos reservados.
+  </footer>
+
+  <!-- ============ BOTON FLOTANTE WHATSAPP ============ -->
+  <!-- PONER ENLACE DE WA AQUI -->
+  <a href="https://wa.me/5490000000000?text=Hola%2C%20quiero%20agendar%20un%20turno" target="_blank" rel="noopener"
+     aria-label="Escribinos por WhatsApp"
+     class="pulse fixed bottom-5 right-5 z-50 w-16 h-16 rounded-full bg-esm text-black flex items-center justify-center text-4xl hover:brightness-110 transition">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+</body>
+</html>
